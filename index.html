@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cảnh báo bắt cóc online & lừa đảo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f8;
+}
+header{
+    background:#c62828;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+.search-box{
+    padding:15px;
+    text-align:center;
+}
+.search-box input{
+    width:80%;
+    max-width:500px;
+    padding:10px;
+    font-size:16px;
+}
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+.card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.card h3{
+    padding:10px;
+    color:#c62828;
+}
+.card p{
+    padding:0 10px 15px;
+    font-size:14px;
+    line-height:1.5;
+}
+footer{
+    background:#333;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* CHAT BOX */
+#chatbox{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:300px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+#chat-header{
+    background:#c62828;
+    color:white;
+    padding:10px;
+    text-align:center;
+    border-radius:10px 10px 0 0;
+}
+#chat-messages{
+    height:200px;
+    overflow-y:auto;
+    padding:10px;
+    font-size:14px;
+}
+#chat-input{
+    display:flex;
+}
+#chat-input input{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-top:1px solid #ddd;
+}
+#chat-input button{
+    padding:8px 12px;
+    border:none;
+    background:#c62828;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CẢNH BÁO BẮT CÓC ONLINE & LỪA ĐẢO QUA MẠNG</h1>
+    <p>Nhận diện – Phòng tránh – Chia sẻ để bảo vệ cộng đồng</p>
+</header>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Tìm hình thức lừa đảo...">
+</div>
+
+<div class="container" id="content">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+<h3>Nhận quà từ người nước ngoài</h3>
+<p>
+Làm quen qua mạng, tạo lòng tin rồi thông báo gửi tiền/quà từ nước ngoài.
+Sau đó yêu cầu nộp các loại phí (thuế, vận chuyển…) và chiếm đoạt tiền.
+</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+<h3>Giả danh cơ quan chức năng</h3>
+<p>
+Mạo danh Công an, Viện kiểm sát gọi điện nói nạn nhân liên quan vụ án,
+yêu cầu chuyển tiền để “phục vụ điều tra”.
+</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1c7">
+<h3>Hack Facebook/Zalo mượn tiền</h3>
+<p>
+Chiếm đoạt tài khoản mạng xã hội rồi nhắn tin người thân, bạn bè mượn tiền.
+</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9">
+<h3>Thông báo trúng thưởng</h3>
+<p>
+Thông báo trúng xe, tiền, tài sản giá trị cao và yêu cầu nộp phí để nhận thưởng.
+</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd">
+<h3>Link giả mạo ngân hàng</h3>
+<p>
+Gửi link giả yêu cầu nhập thông tin đăng nhập, OTP để chiếm đoạt tiền.
+</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f">
+<h3>Đầu tư tài chính, tiền ảo</h3>
+<p>
+Hứa lợi nhuận cao, ban đầu trả lãi đều, sau đó khóa tài khoản và chiếm đoạt.
+</p>
+</div>
+
+</div>
+
+<footer>
+⚠ Không cung cấp CCCD, OTP, tài khoản ngân hàng cho người lạ  
+<br>📞 Khi nghi ngờ bị lừa đảo: gọi 113 hoặc Công an nơi gần nhất
+</footer>
+
+<!-- CHAT -->
+<div id="chatbox">
+<div id="chat-header">Hỗ trợ AI</div>
+<div id="chat-messages">
+<p><b>AI:</b> Chào bạn! Hãy mô tả tình huống nghi ngờ lừa đảo.</p>
+</div>
+<div id="chat-input">
+<input type="text" id="userText" placeholder="Nhập câu hỏi...">
+<button onclick="sendMessage()">Gửi</button>
+</div>
+</div>
+
+<script>
+function sendMessage(){
+    let input=document.getElementById("userText");
+    let msg=input.value;
+    if(!msg) return;
+    let chat=document.getElementById("chat-messages");
+    chat.innerHTML+=`<p><b>Bạn:</b> ${msg}</p>`;
+    chat.innerHTML+=`<p><b>AI:</b> Vui lòng liên hệ Công an hoặc không chuyển tiền cho người lạ.</p>`;
+    input.value="";
+    chat.scrollTop=chat.scrollHeight;
+}
+</script>
+
+</body>
+</html>
+<script>
+const API_KEY = "DÁN_API_KEY_CỦA_BẠN_VÀO_ĐÂY";
+
+async function sendMessage(){
+    let input = document.getElementById("userText");
+    let msg = input.value;
+    if(!msg) return;
+
+    let chat = document.getElementById("chat-messages");
+    chat.innerHTML += `<p><b>Bạn:</b> ${msg}</p>`;
+    input.value = "";
+
+    try{
+        let response = await fetch("https://api.openai.com/v1/chat/completions",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":"Bearer " + API_KEY
+            },
+            body: JSON.stringify({
+                model:"gpt-4o-mini",
+                messages:[
+                    {
+                      role:"system",
+                      content:"Bạn là trợ lý tư vấn phòng chống bắt cóc online và lừa đảo tại Việt Nam. Trả lời ngắn gọn, dễ hiểu."
+                    },
+                    {role:"user",content:msg}
+                ]
+            })
+        });
+
+        let data = await response.json();
+        let reply = data.choices[0].message.content;
+
+        chat.innerHTML += `<p><b>AI:</b> ${reply}</p>`;
+        chat.scrollTop = chat.scrollHeight;
+
+    }catch(e){
+        chat.innerHTML += `<p><b>AI:</b> Lỗi kết nối ChatGPT.</p>`;
+    }
+}
+</script>
